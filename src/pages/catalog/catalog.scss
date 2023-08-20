@@ -1,0 +1,142 @@
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-top: 79px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(3, 0.4fr);
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 323px;
+    max-height: 323px;
+    border-radius: 10px;
+  }
+
+  &__sort {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 20px;
+  }
+
+  &__sorts {
+    &-list-item {
+      color: rgba(10, 10, 10, 0.89);
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+
+      &--active {
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+
+  &__sorts-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  &__search {
+    position: relative;
+    margin-left: 8px;
+
+    &-logo {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+
+    &-label {
+      position: absolute;
+      left: 15px;
+      top: -13px;
+      background: #fff;
+      padding: 0 3px;
+    }
+  }
+
+  &__card {
+    cursor: pointer;
+  }
+
+  &__form {
+    margin-right: 39px;
+
+    &-categories {
+      margin-top: 35px;
+      border-top: 1px solid #CDCDCD;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #CDCDCD;
+    }
+
+    &-wrapper {
+      max-height: 87px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar-track {
+        border-radius: 3px;
+        background: transparent;
+        width: 15px;
+      }
+
+      &::-webkit-scrollbar {
+        border-radius: 3px;
+        border: 1px solid #CDCDCD;
+        width: 15px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 13px;
+        height: 16px;
+        border-radius: 2px;
+        background: #836142;
+      }
+    }
+
+    &-button {
+      margin-top: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &-prices, &-collections, &-materials, &-collections {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #CDCDCD;
+    }
+  }
+
+
+}
+
+.input {
+  border-radius: 10px;
+  border: 1px solid rgba(10, 10, 10, 0.89);
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+}
+
+.form-title {
+  padding-top: 15px;
+  color: rgba(10, 10, 10, 0.89);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.form-subtitle {
+  margin: 10px 0;
+  color: rgba(10, 10, 10, 0.89);
+  font-size: 12px;
+  font-weight: 400;
+}

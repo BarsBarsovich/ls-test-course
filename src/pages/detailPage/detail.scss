@@ -1,0 +1,106 @@
+.detail-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  margin-top: 70px;
+
+  &__img {
+    width: 766px;
+    height: 628px;
+    object-fit: contain;
+  }
+
+  &__card-title {
+    color: rgba(10, 10, 10, 0.89);
+    font-family: 'Josefin Slab', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+  }
+
+  &__card-subtitle {
+    margin-top: 30px;
+    color: rgba(10, 10, 10, 0.89);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__description {
+    color: rgba(10, 10, 10, 0.89);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__price {
+    margin-top: 20px;
+    color: rgba(10, 10, 10, 0.89);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  &__additional-text {
+    margin-top: 10px;
+  }
+
+  &__buttons {
+    margin-top: 151px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+  }
+
+  &__slider {
+    margin-top: 10px;
+  }
+}
+
+
+.colors-list {
+  display: flex;
+  //flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+
+  &__item {
+    border-radius: 10px;
+    border: 1px solid rgba(10, 10, 10, 0.89);
+    width: 81px;
+    height: 81px;
+    cursor: pointer;
+
+
+    :first-child {
+      border: 1px solid rgba(10, 10, 10, 0.89);
+    }
+
+    //background: #D7C6B5;
+  }
+}
+
+.sizes-list {
+  margin-top: 10px;
+
+  &__card {
+    border-radius: 10px;
+    border: 1px solid rgba(10, 10, 10, 0.89);
+    color: rgba(10, 10, 10, 0.89);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 30px;
+    width: 125px;
+    cursor: pointer;
+
+  }
+}
+
+
+.slider {
+  &__arrow {
+    
+  }
+}

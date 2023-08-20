@@ -1,0 +1,64 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #836142;
+  //font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fffaf3;
+  border: transparent;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: 2ms all ease-in-out;
+
+  &_wide {
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background: darken(#836142, 15);
+  }
+
+  &_green {
+    background: #2f675f;
+
+    &:hover {
+      background: darken(#2f675f, 9);
+    }
+  }
+
+  &_smal {
+    height: 32px;
+    min-width: 212px;
+    max-width: 80%;
+  }
+
+  &_white {
+    background: #fff;
+    color: rgba(10, 10, 10, 0.89);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 1px solid rgba(10, 10, 10, 0.89);
+  }
+
+  &_reset {
+    background: #ffffff;
+    color: rgba(10, 10, 10, 0.89);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(10, 10, 10, 0.89);
+    height: 29px;
+
+    &:hover {
+      background: darken(#ffffff, 15);
+    }
+  }
+}

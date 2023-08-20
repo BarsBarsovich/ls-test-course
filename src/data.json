@@ -1,0 +1,231 @@
+[
+  {
+    "id": 1,
+    "name": "Chair Loren",
+    "price": "399",
+    "description": "A cozy armchair in a stylish design with a soft beige color will bring style and comfort to your design in your interior.",
+    "additional_description": [
+      "Eco-natural chenille upholstery;",
+      "Polyurethane foam lining;",
+      "Solid ash wood legs in a dark finish;",
+      "Withstands weight up to 200 kg;",
+      "Available in a choice of finishes and/or colours."
+    ],
+    "image": "/products/static-chair.png",
+    "detailImage": "/detail-page/big-chair.png",
+    "catalogImage": "/catalog/catalog-1.png",
+    "category": "Chairs",
+    "colors": [
+      "Beige",
+      "Blue",
+      "Green",
+      "Brown",
+      "Grey"
+    ],
+    "sizes": [
+      "100-40-40",
+      "80-40-40",
+      "60-40-40"
+    ],
+    "material": "Fabric",
+    "collections": "Urban house"
+  },
+  {
+    "id": 2,
+    "name": "Sofa",
+    "price": "500",
+    "description": "Comfortable sofa with soft upholstery and wooden frame. Perfect for relaxing in the living room.",
+    "additional_description": [
+    ],
+    "image": "/products/static-sofa.png",
+    "catalogImage": "/catalog/catalog-2.png",
+    "category": "Sofas",
+    "colors": [
+      "White"
+    ],
+    "sizes": [
+    ],
+    "material": "Leather",
+    "collections": "Modum"
+  },
+  {
+    "id": 3,
+    "name": "Bed",
+    "price": "800",
+    "description": "Spacious bed with an elegant design and a comfortable mattress. Ideal for a peaceful sleep and relaxation.",
+    "additional_description": [
+    ],
+    "image": "/products/static-grey-chair.png",
+    "catalogImage": "/catalog/catalog-3.png",
+    "category": "Beds",
+    "colors": [
+      "Beige"
+    ],
+    "sizes": [
+    ],
+    "material": "Wood",
+    "collections": "Elegant Collection"
+  },
+  {
+    "id": 4,
+    "name": "Wardrobe",
+    "price": "400",
+    "description": "Spacious wardrobe with shelves and hangers for storing clothes and accessories. Stylish and functional furniture piece.",
+    "additional_description": [
+    ],
+    "image": "/products/static-wardrobe.png",
+    "catalogImage": "/catalog/catalog-4.png",
+    "category": "Wardrobes",
+    "colors": [
+      "Brown"
+    ],
+    "sizes": [
+    ],
+    "material": "Wood/Metal",
+    "collections": "Summer Breeze"
+  },
+  {
+    "id": 5,
+    "name": "Table",
+    "price": "250",
+    "description": "Sturdy table with a wooden tabletop and metal legs. Suitable for a workspace or dining area.",
+    "additional_description": [
+    ],
+    "image": "/products/static-table.png",
+    "catalogImage": "/catalog/catalog-5.png",
+    "category": "Tables",
+    "colors": [
+      "Blue"
+    ],
+    "sizes": [
+    ],
+    "material": "Upholstery",
+    "collections": "Vintage Inspiration"
+  },
+  {
+    "id": 6,
+    "name": "Nightstand",
+    "price": "150",
+    "description": "Convenient nightstand with drawers and an open shelf for storing various items. Great choice for a bedroom or living room.",
+    "additional_description": [
+    ],
+    "image": "/products/static-nightstand.png",
+    "catalogImage": "/catalog/catalog-6.png",
+    "category": "Nightstands",
+    "colors": [
+      "White"
+    ],
+    "sizes": [
+    ],
+    "material": "Wood",
+    "collections": "Modern Style"
+  },
+  {
+    "id": 7,
+    "name": "Dresser",
+    "price": "350",
+    "description": "Spacious dresser with large drawers for storing clothes and accessories. Perfect for a bedroom or living room.",
+    "additional_description": [
+    ],
+    "image": "/products/static-dresser.png",
+    "catalogImage": "/catalog/catalog-7.png",
+    "category": "Dressers",
+    "colors": [
+      "Gray"
+    ],
+    "sizes": [
+    ],
+    "material": "Wood",
+    "collections": "Urban house"
+  },
+  {
+    "id": 8,
+    "name": "Shelf",
+    "price": "80",
+    "description": "Practical shelf for storing books, decorative items, and other belongings. Made from durable materials.",
+    "additional_description": [
+    ],
+    "image": "/products/static-shelf.png",
+    "catalogImage": "/catalog/catalog-8.png",
+    "category": "Shelfs",
+    "colors": [
+      "White"
+    ],
+    "sizes": [
+    ],
+    "material": "Wood",
+    "collections": "Vintage Inspiration"
+  },
+  {
+    "id": 9,
+    "name": "Mirror",
+    "price": "120",
+    "description": "Elegant mirror with a modern-style frame. Ideal for a bathroom or entryway.",
+    "additional_description": [
+    ],
+    "image": "/products/static-mirror.png",
+    "catalogImage": "/catalog/catalog-9.png",
+    "category": "Mirrors",
+    "colors": [
+      "Silver"
+    ],
+    "sizes": [
+    ],
+    "material": "Metal",
+    "collections": "Elegant Collection"
+  },
+  {
+    "id": 10,
+    "name": "Bookshelf",
+    "price": "300",
+    "description": "Large and sturdy bookshelf with open shelves for storage and display. Perfect for books, items, and collections.",
+    "additional_description": [
+    ],
+    "image": "/products/static-bookshelf2.png",
+    "catalogImage": "/catalog/catalog-10.png",
+    "category": "Shelfs",
+    "colors": [
+      "Black"
+    ],
+    "sizes": [
+    ],
+    "material": "Wood",
+    "collections": "Summer Breeze"
+  },
+  {
+    "id": 11,
+    "name": "Computer Desk",
+    "price": "180",
+    "description": "Compact and functional computer desk with shelves for storing peripherals. Suitable for a home office.",
+    "additional_description": [
+    ],
+    "image": "/products/static-computer-desc.png",
+    "catalogImage": "/catalog/catalog-11.png",
+    "category": "Desks",
+    "colors": [
+      "White"
+    ],
+    "sizes": [
+    ],
+    "material": "Wood/Metal",
+    "collections": "Modern Style"
+  },
+  {
+    "id": 12,
+    "name": "Stool",
+    "price": "50",
+    "description": "Comfortable and stylish stool with a padded seat. Perfect for a kitchen, bar, or bathroom.",
+    "additional_description": [
+    ],
+    "image": "/products/static-stool.png",
+    "catalogImage": "/catalog/catalog-12.png",
+    "category": "Stools",
+    "colors": [
+      "Pastel Green"
+    ],
+    "sizes": [
+    ],
+    "material": "Upholstery",
+    "collections": "Modum"
+  }
+]

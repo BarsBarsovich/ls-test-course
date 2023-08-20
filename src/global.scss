@@ -1,0 +1,79 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100%;
+  //overflow: hidden;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  font-family: "Josefin Slab", serif;
+  font-size: 64px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  &--left {
+    text-align: left;
+    //margin-left: 30px;
+  }
+  &--mt {
+    margin-top: -31px;
+  }
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+.logo {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
