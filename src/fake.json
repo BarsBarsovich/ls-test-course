@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Dara Loren",
+    "price": "299",
+    "image": "/fake/take-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Soap",
+    "price": "329",
+    "image": "/fake/take-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Gustavo Lambert",
+    "price": "359",
+    "image": "/fake/take-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Brunello Cuchinelli",
+    "price": "699",
+    "image": "/fake/take-4.png"
+  },
+  {
+    "id": 5,
+    "name": "Sara Loren Shmidth",
+    "price": "999",
+    "image": "/fake/take-5.png"
+  },
+  {
+    "id": 6,
+    "name": "Exel",
+    "price": "599",
+    "image": "/fake/take-6.png"
+  }
+]

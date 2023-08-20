@@ -7,16 +7,53 @@
       <div class="container">
         <div class="detail-page">
           <div class="detail-page__photo">
-            <img v-if="currentProduct.image" :src="require('@/assets' + currentProduct.detailImage)" alt="" class="detail-page__img" />
+            <img
+              v-if="currentProduct.image"
+              :src="require('@/assets' + currentProduct.detailImage)"
+              alt=""
+              class="detail-page__img"
+              @click="movePrev"
+            />
             <div class="detail-page__slider">
               <div class="slider">
-                <div class="slider__arrow"></div>
+                <img
+                  src="@/assets/detail-page/slider/expand-right.svg"
+                  alt=""
+                  class="slider__arrow slider__arrow--left"
+                  @click="movePrev"
+                />
                 <div class="slider__list">
-                  <div class="slider__item">
-                    <img src="" alt="" />
+                  <div class="slider__list-container">
+                    <div class="slider__wrapper" ref="sliderContainer">
+                      <div class="wrapper" ref="allSlidesContainer" :style="{ transform: 'translateX(-' + currentSliderPosition + 'px)' }">
+                        <div class="slider__item" v-for="n in 5" :key="n">
+                          <img :src="require('@/assets/detail-page/slider/slider-photo-' + n + '.png')" alt="" />
+                        </div>
+                        <div class="slider__item">
+                          <img src="@/assets/detail-page/slider/slider-photo-5.png" alt="" />
+                        </div>
+                        <div class="slider__item">
+                          <img src="@/assets/detail-page/slider/slider-photo-4.png" alt="" />
+                        </div>
+                        <div class="slider__item">
+                          <img src="@/assets/detail-page/slider/slider-photo-3.png" alt="" />
+                        </div>
+                        <div class="slider__item">
+                          <img src="@/assets/detail-page/slider/slider-photo-2.png" alt="" />
+                        </div>
+                        <div class="slider__item">
+                          <img src="@/assets/detail-page/slider/slider-photo-1.png" alt="" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="slider__arrow"></div>
+                <img
+                  src="@/assets/detail-page/slider/expand-left.svg"
+                  alt=""
+                  class="slider__arrow slider__arrow--right"
+                  @click="moveNext"
+                />
               </div>
             </div>
           </div>
@@ -51,6 +88,10 @@
             </div>
           </div>
         </div>
+        <div class="same-collection">
+          <xWrapper />
+        </div>
+        <products title="Our featured products" :productsCard="data" />
       </div>
     </div>
     <div class="layout__footer">
@@ -61,17 +102,22 @@
 
 <script>
 import products from '@/data.json';
+import data from '@/data.json';
 import XHeader from '@/components/xHeader.vue';
 import Footer from '@/pages/sections/footer.vue';
 import XButton from '@/components/xButton/xButton.vue';
+import Products from '@/pages/sections/products.vue';
+import XWrapper from '@/components/wrapper.vue';
 
 export default {
   name: 'detailPage',
-  components: { XButton, XHeader, Footer },
+  components: { XWrapper, Products, XButton, XHeader, Footer },
   data() {
     return {
       currentProduct: {},
       products,
+      currentSliderPosition: 0,
+      data,
     };
   },
   mounted() {
@@ -86,6 +132,20 @@ export default {
         return `${arrName[0]} "${arrName[1]}`;
       }
     },
+    movePrev() {
+      if (this.currentSliderPosition > 0) {
+        this.currentSliderPosition -= this.$refs.sliderContainer.clientWidth;
+        this.currentSliderPosition -= 6;
+      }
+    },
+    moveNext() {
+      const temp = this.currentSliderPosition + this.$refs.sliderContainer.clientWidth;
+      if (temp < this.$refs.allSlidesContainer.clientWidth) {
+        this.currentSliderPosition = temp + 6;
+      }
+    },
+    moveCollectionPrev() {},
+    moveCollectionNext() {},
   },
 };
 </script>

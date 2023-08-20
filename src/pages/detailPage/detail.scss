@@ -44,11 +44,11 @@
   }
 
   &__buttons {
-    margin-top: 151px;
+    margin-top: 267px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap:10px;
+    gap: 10px;
   }
 
   &__slider {
@@ -100,7 +100,86 @@
 
 
 .slider {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background: #ffffff;
+    //margin-left: 111px;
+    max-width: 549px;
+    //transform: translateX();
+
+    &-container {
+      overflow: hidden;
+      max-width: 549px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    overflow: hidden;
+    max-width: 549px;
+
+  }
+
   &__arrow {
-    
+    cursor: pointer;
+  }
+
+}
+
+.wrapper {
+  width: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+
+.same-collection {
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.arrow {
+  margin-right: 190px;
+  margin-left: 171px;
+  cursor: pointer;
+
+  &--right {
+    margin-left: 190px;
+  }
+}
+
+.products {
+  margin-top: 71px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__content {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
   }
 }

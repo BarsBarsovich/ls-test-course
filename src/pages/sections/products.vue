@@ -1,5 +1,5 @@
 <template>
-  <section class="products">
+  <section class="products" v-if="isMainPage">
     <div class="container">
       <div class="products__title">
         <div class="arrow" @click="movePrev()">
@@ -25,20 +25,52 @@
       </div>
     </div>
   </section>
+  <section class="products" v-if="!isMainPage">
+    <div class="products__title">
+      <div class="arrow" @click="movePrev()">
+        <img src="@/assets/expand-left.svg" alt="" class="arrow-icon" />
+      </div>
+      <h1 class="title">{{ title }}</h1>
+      <div class="arrow arrow--right" @click="moveNext()">
+        <img src="@/assets/expand-right.svg" alt="" class="arrow-icon" />
+      </div>
+    </div>
+    <div class="products__content">
+      <div class="card-list" :style="{ transform: 'translateX(-' + currentPosition + 'px)' }">
+        <div class="card" v-for="(productCard, index) in productsCard" :key="productCard.id">
+          <div class="div" v-if="index <= 7" @click="navigate(index, productCard.id)">
+            <img :src="require('@/assets' + productCard.image)" alt="" class="card__icon" />
+            <div class="card__info">
+              <p class="card__info-name">{{ productCard.name }}</p>
+              <p class="card__info-cost">{{ changePrice(index, productCard.price) }} $</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
-import productsCard from '@/data.json';
-
 export default {
   name: 'products',
   data() {
     return {
-      productsCard,
       sliderWith: 0,
       currentPosition: 0,
       containerWidth: 0,
     };
+  },
+  props: {
+    isMainPage: {
+      type: Boolean,
+    },
+    title: {
+      type: String,
+    },
+    productsCard: {
+      type: Array,
+    },
   },
   methods: {
     movePrev() {

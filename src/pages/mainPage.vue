@@ -52,7 +52,7 @@
       </div>
     </div>
   </section>
-  <products />
+  <products :isMainPage="true" />
   <collections />
   <articles />
   <Footer />
