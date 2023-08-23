@@ -1,4 +1,4 @@
-import mainPage from '@/pages/mainPage.vue';
+import mainPage from '@/pages/mainPage/mainPage.vue';
 import aboutPage from '@/pages/aboutPage.vue';
 import pageNotFound from '@/pages/pageNotFound.vue';
 import contactsPage from '@/pages/contacts/contactsPage.vue';

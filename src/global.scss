@@ -73,12 +73,32 @@ a {
     font-size: 32px;
   }
 
+  @include desktop {
+    font-size: 32px;
+  }
+
   &--long-title {
     @include desktop {
       font-size: 30px;
     }
     @include tablet {
       font-size: 20px;
+    }
+  }
+
+  &--centered {
+    @include desktop {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &--font {
+    @include desktop {
+      font-size: 64px;
+    }
+    @include tablet {
+      font-size: 32px;
     }
   }
 }

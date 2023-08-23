@@ -1,5 +1,5 @@
 <template>
-  <products title="Same collection" :productsCard="fakeCatalog" />
+  <products title="Same collection" :productsCard="fakeCatalog" :isCentered="true" />
 </template>
 
 <script>

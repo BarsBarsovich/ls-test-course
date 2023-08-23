@@ -74,18 +74,12 @@
                 <div class="catalog__card" v-for="card in firstRow" :key="card.id" @click="navigateTo(card.id)">
                   <catalogCard :imgUrl="card.catalogImage" :price="card.price" :title="card.name" :category="card.category" />
                 </div>
-              </div>
-              <div class="catalog__row">
                 <div class="catalog__card" v-for="card in secondRow" :key="card.id" @click="navigateTo(card.id)">
                   <catalogCard :imgUrl="card.catalogImage" :price="card.price" :title="card.name" :category="card.category" />
                 </div>
-              </div>
-              <div class="catalog__row">
                 <div class="catalog__card" v-for="card in thirdRow" :key="card.id" @click="navigateTo(card.id)">
                   <catalogCard :imgUrl="card.catalogImage" :price="card.price" :title="card.name" :category="card.category" />
                 </div>
-              </div>
-              <div class="catalog__row">
                 <div class="catalog__card" v-for="card in fourthRow" :key="card.id" @click="navigateTo(card.id)">
                   <catalogCard :imgUrl="card.catalogImage" :price="card.price" :title="card.name" :category="card.category" />
                 </div>
@@ -113,7 +107,7 @@ import XFooter from '@/pages/sections/footer.vue';
 import XHeader from '@/components/xHeader.vue';
 import db from '../../data.json';
 import lodash from 'lodash';
-import CatalogCard from '@/components/catalogCard.vue';
+import CatalogCard from '@/components/catalogCard/catalogCard.vue';
 import XCheckbox from '@/components/xCheckbox/xCheckbox.vue';
 import XRange from '@/components/xRange/xRange.vue';
 import XButton from '@/components/xButton/xButton.vue';

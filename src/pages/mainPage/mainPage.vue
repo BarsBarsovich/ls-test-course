@@ -21,10 +21,10 @@
     </div>
   </div>
   <section class="store">
-    <h1 class="title">Store of stylish and modern furniture</h1>
+    <h1 class="title title--font">Store of stylish and modern furniture</h1>
     <div class="store__container container">
       <div class="store__logo">
-        <img src="../assets/lamp.png" alt="" class="store__logo" />
+        <img src="../../assets/lamp.png" alt="" class="store__logo-img" />
       </div>
       <div class="store__slider">
         <div class="store__slider-container">
@@ -52,7 +52,7 @@
       </div>
     </div>
   </section>
-  <products :isMainPage="true" />
+  <products :isMainPage="true" :productsCard="products" />
   <collections />
   <articles />
   <Footer />
@@ -66,6 +66,7 @@ import XButton from '@/components/xButton/xButton.vue';
 import SliderButton from '@/components/SliderButton.vue';
 import Footer from '@/pages/sections/footer.vue';
 import XNav from '@/components/xNav.vue';
+import products from '@/data.json';
 
 export default {
   name: 'mainPage',
@@ -73,6 +74,7 @@ export default {
   data() {
     return {
       currentBrowser: '',
+      products,
     };
   },
   methods: {
@@ -104,74 +106,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.header {
-  background: url('../assets/header-bg.png') top center/contain no-repeat;
-  min-height: 765px;
-
-  &__container {
-    padding: 14px 0;
-    border-bottom: 1px solid #ffffff;
-  }
-
-  &__text {
-    //font-family: Montserrat;
-    font-size: 40px;
-    font-weight: 300;
-    color: #fff;
-    margin: 72px 0 20px 0;
-    font-family: 'Montserrat', sans-serif;
-  }
-}
-
-.store {
-  margin-top: 79px;
-
-  &__container {
-    margin-top: 21px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-  }
-
-  &__logo {
-    width: 766px;
-    height: 530px;
-    border-radius: 10px;
-  }
-
-  &__slider {
-    border-radius: 10px;
-    height: 530px;
-    width: 544px;
-    color: #2f675f;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    background: #dde1d8;
-
-    &-container {
-      padding: 40px;
-    }
-
-    &-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 300;
-    }
-
-    &-wrapper {
-      margin-bottom: 115px;
-    }
-
-    &-text {
-      font-size: 16px;
-      font-weight: 400;
-      max-width: 310px;
-      padding-top: 10px;
-    }
-  }
-}
-</style>
+<style scoped lang="scss" src="./main.scss"></style>

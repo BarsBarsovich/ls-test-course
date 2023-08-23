@@ -11,12 +11,12 @@
         </div>
         <div class="articles__icons">
           <div class="articles__icons-wrapper">
-            <img src="@/assets/chair.png" alt="chair" />
-            <img src="@/assets/pillow.png" alt="pillow" />
+            <img src="@/assets/chair.png" alt="chair" class="articles__icons-img" />
+            <img src="@/assets/pillow.png" alt="pillow" class="articles__icons-img" />
           </div>
           <div class="articles__icons-wrapper">
-            <img src="@/assets/chair-2.png" alt="chair" />
-            <img src="@/assets/bad.png" alt="bad" />
+            <img src="@/assets/chair-2.png" alt="chair" class="articles__icons-img" />
+            <img src="@/assets/bad.png" alt="bad" class="articles__icons-img" />
           </div>
         </div>
       </div>
@@ -29,12 +29,12 @@
         </div>
         <div class="articles__icons">
           <div class="articles__icons-wrapper articles__icons-wrapper--reversed">
-            <img src="@/assets/chair.png" alt="chair" />
-            <img src="@/assets/pillow.png" alt="pillow" />
+            <img src="@/assets/chair.png" alt="chair" class="articles__icons-img" />
+            <img src="@/assets/pillow.png" alt="pillow" class="articles__icons-img" />
           </div>
           <div class="articles__icons-wrapper articles__icons-wrapper--reversed">
-            <img src="@/assets/chair-2.png" alt="chair" />
-            <img src="@/assets/bad.png" alt="bad" />
+            <img src="@/assets/chair-2.png" alt="chair" class="articles__icons-img" />
+            <img src="@/assets/bad.png" alt="bad" class="articles__icons-img" />
           </div>
         </div>
       </div>
@@ -52,11 +52,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import 'src/media';
+
 .articles {
   margin-top: 79px;
+  @include tablet {
+    margin-top: 120px;
+  }
 
   &__description {
     padding-left: 40px;
+    @include tablet {
+      padding: 40px 10px;
+    }
   }
 
   &__title {
@@ -75,11 +83,19 @@ export default {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     &--reversed {
       flex-direction: row-reverse;
       margin-top: 8px;
       justify-content: flex-end;
+      @include tablet {
+        flex-direction: column-reverse;
+      }
     }
   }
 
@@ -89,6 +105,9 @@ export default {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 10px 10px 0 0;
+    @include tablet {
+      padding: 10px;
+    }
 
     &:last-child {
       padding-bottom: 10px;
@@ -96,6 +115,12 @@ export default {
 
     &--reversed {
       padding-left: 10px;
+    }
+  }
+
+  &__icons-img {
+    @include tablet {
+      width: 50%;
     }
   }
 }

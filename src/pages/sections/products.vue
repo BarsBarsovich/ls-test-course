@@ -5,7 +5,7 @@
         <div class="arrow" @click="movePrev()">
           <img src="@/assets/expand-left.svg" alt="" class="arrow-icon" />
         </div>
-        <h1 class="title">Our featured products</h1>
+        <h1 class="title title--centered">Our featured products</h1>
         <div class="arrow arrow--right" @click="moveNext()">
           <img src="@/assets/expand-right.svg" alt="" class="arrow-icon" />
         </div>
@@ -14,7 +14,15 @@
         <div class="card-list" :style="{ transform: 'translateX(-' + currentPosition + 'px)' }">
           <div class="card" v-for="(productCard, index) in productsCard" :key="productCard.id">
             <div class="div" v-if="index <= 7" @click="navigate(index, productCard.id)">
-              <img :src="require('@/assets' + productCard.image)" alt="" class="card__icon" />
+              <img
+                :src="
+                  isMobile && (index === 1 || index === 3)
+                    ? 'https://materialyinfo.ru/wp-content/uploads/2017/12/Derevyannyie-stulya-84.jpg'
+                    : require('@/assets' + productCard.image)
+                "
+                alt=""
+                class="card__icon"
+              />
               <div class="card__info">
                 <p class="card__info-name">{{ productCard.name }}</p>
                 <p class="card__info-cost">{{ changePrice(index, productCard.price) }} $</p>
@@ -30,7 +38,7 @@
       <div class="arrow" @click="movePrev()">
         <img src="@/assets/expand-left.svg" alt="" class="arrow-icon" />
       </div>
-      <h1 class="title">{{ title }}</h1>
+      <h1 class="title" v-bind:class="{ 'title--centered': isCentered }">{{ title }}</h1>
       <div class="arrow arrow--right" @click="moveNext()">
         <img src="@/assets/expand-right.svg" alt="" class="arrow-icon" />
       </div>
@@ -39,7 +47,16 @@
       <div class="card-list" :style="{ transform: 'translateX(-' + currentPosition + 'px)' }">
         <div class="card" v-for="(productCard, index) in productsCard" :key="productCard.id">
           <div class="div" v-if="index <= 7" @click="navigate(index, productCard.id)">
-            <img :src="require('@/assets' + productCard.image)" alt="" class="card__icon" />
+            <img
+              :src="
+                isMobile && (index === 1 || index === 3)
+                  ? 'https://materialyinfo.ru/wp-content/uploads/2017/12/Derevyannyie-stulya-84.jpg'
+                  : require('@/assets' + productCard.image)
+              "
+              alt=""
+              class="card__icon"
+            />
+
             <div class="card__info">
               <p class="card__info-name">{{ productCard.name }}</p>
               <p class="card__info-cost">{{ changePrice(index, productCard.price) }} $</p>
@@ -59,6 +76,7 @@ export default {
       sliderWith: 0,
       currentPosition: 0,
       containerWidth: 0,
+      isMobile: false,
     };
   },
   props: {
@@ -70,6 +88,9 @@ export default {
     },
     productsCard: {
       type: Array,
+    },
+    isCentered: {
+      type: Boolean,
     },
   },
   methods: {
@@ -110,11 +131,15 @@ export default {
   mounted() {
     this.sliderWith = document.querySelector('.card-list').clientWidth;
     this.containerWidth = document.querySelector('.products__content').clientWidth;
+    this.isMobile = document.querySelector('#app').clientWidth < 1200;
+    console.log(this.isMobile);
   },
 };
 </script>
 
 <style scoped lang="scss">
+@import '/src/media';
+
 .products {
   margin-top: 71px;
 
@@ -138,14 +163,23 @@ export default {
   margin-right: 190px;
   margin-left: 171px;
   cursor: pointer;
+  @include desktop {
+    display: none;
+  }
 
   &--right {
     margin-left: 190px;
+    @include desktop {
+      display: none;
+    }
   }
 }
 
 .card {
   width: 33%;
+  @include desktop {
+    width: 100%;
+  }
 
   &-list {
     display: flex;
@@ -154,7 +188,9 @@ export default {
     gap: 10px;
     width: auto;
     transition: 1s all ease-in-out;
-    //transform: translateX(-1320px);
+    @include desktop {
+      flex-wrap: wrap;
+    }
   }
 
   &__icon {
@@ -164,6 +200,13 @@ export default {
     min-height: 600px;
     object-fit: cover;
     border-radius: 10px;
+    @include desktop {
+      max-width: unset;
+      max-height: unset;
+      min-width: unset;
+      min-height: unset;
+      width: 100%;
+    }
   }
 
   &__info {

@@ -91,7 +91,7 @@
         <div class="same-collection">
           <xWrapper />
         </div>
-        <products title="Our featured products" :productsCard="data" />
+        <products title="Our featured products" :productsCard="data" :isCentered="true" />
       </div>
     </div>
     <div class="layout__footer">
@@ -144,8 +144,6 @@ export default {
         this.currentSliderPosition = temp + 6;
       }
     },
-    moveCollectionPrev() {},
-    moveCollectionNext() {},
   },
 };
 </script>
