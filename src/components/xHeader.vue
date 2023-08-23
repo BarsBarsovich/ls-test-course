@@ -21,12 +21,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import 'src/media';
+
 .header {
   border-radius: 10px;
   background: #836142;
 
-  &__continer {
-    padding: 50px 30px;
+  &__container {
+    //padding: 50px 30px;
+    @include tablet {
+      padding: 15px 0;
+    }
   }
 }
 </style>

@@ -1,0 +1,21 @@
+$phone: 320px;
+$tablet: 767px;
+$desktop: 1300px;
+$wide: 1300px;
+
+// до этого идет мобилка
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+
+  }
+}
+
+// тут идет планшет
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+

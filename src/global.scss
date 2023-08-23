@@ -1,3 +1,5 @@
+@import 'media';
+
 *,
 *:after,
 *:before {
@@ -35,6 +37,9 @@ li {
   max-width: 1320px;
   margin: 0 auto;
   height: 100%;
+  @include tablet {
+    max-width: 500px;
+  }
   //overflow: hidden;
 }
 
@@ -54,12 +59,27 @@ a {
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
+
   &--left {
     text-align: left;
     //margin-left: 30px;
   }
+
   &--mt {
     margin-top: -31px;
+  }
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  &--long-title {
+    @include desktop {
+      font-size: 30px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
   }
 }
 
@@ -76,4 +96,21 @@ a {
   text-transform: uppercase;
   color: #fff;
   font-family: 'Raleway', sans-serif;
+  @include tablet {
+    margin: 20px 0;
+    display: block;
+    font-size: 24px;
+  }
+  @include desktop {
+    font-size: 39px;
+  }
+}
+
+.mt70 {
+  margin-top: 70px;
+}
+
+#app {
+  height: 100%;
+  //overflow-x: hidden;
 }

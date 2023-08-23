@@ -6,7 +6,7 @@
     <div class="layout__content">
       <div class="container">
         <div class="about">
-          <h1 class="title about__title">Store of stylish and modern furniture in Minsk</h1>
+          <h1 class="title title--long-title about__title mt70">Store of stylish and modern furniture in Minsk</h1>
           <div class="about__gallery">
             <div class="about__gallery-logo">
               <img src="@/assets/about-gallery-logo.png" alt="" />
@@ -26,34 +26,40 @@
         <div class="benefits">
           <div class="benefits__list">
             <div class="benefits__item">
-              <p class="benefits__item-title">It's Style</p>
-              <p class="benefits__item-desc">
-                Let’s face it: you’re not going to buy a piece of furniture you don’t like the look of. You’ll be buying furniture that
-                suits your unique tastes and compliments your space. Consider buying furniture with a simple, clean-cut aesthetic.
-              </p>
+              <div class="benefits__item-wrapper">
+                <p class="benefits__item-title">It's Style</p>
+                <p class="benefits__item-desc">
+                  Let’s face it: you’re not going to buy a piece of furniture you don’t like the look of. You’ll be buying furniture that
+                  suits your unique tastes and compliments your space. Consider buying furniture with a simple, clean-cut aesthetic.
+                </p>
+              </div>
               <img src="@/assets/about-benefits-1.png" class="benefits__item-logo" alt="" />
             </div>
             <div class="benefits__item">
-              <p class="benefits__item-title">It is Сomfor</p>
-              <p class="benefits__item-desc benefits__item-desc--wide">
-                Also, one of the main goals of furniture is not just to emphasize your design, and be comfortable to use, to bring you
-                pleasure and peace of mind. Our furniture is not deprived of this, you can come to our showrooms and see for yourself by
-                testing our exhibited products.
-              </p>
+              <div class="benefits__item-wrapper">
+                <p class="benefits__item-title">It is Сomfor</p>
+                <p class="benefits__item-desc benefits__item-desc--wide">
+                  Also, one of the main goals of furniture is not just to emphasize your design, and be comfortable to use, to bring you
+                  pleasure and peace of mind. Our furniture is not deprived of this, you can come to our showrooms and see for yourself by
+                  testing our exhibited products.
+                </p>
+              </div>
               <img src="@/assets/about-benefits-2.png" class="benefits__item-logo benefits__item-logo--wide" alt="" />
             </div>
             <div class="benefits__item">
-              <p class="benefits__item-title">It's Quality</p>
-              <p class="benefits__item-desc">
-                Quality is what makes our customers come to us again and again. We not only guarantee that your furniture will serve you for
-                many years, but we also provide a guarantee for some of our products.
-              </p>
+              <div class="benefits__item-wrapper">
+                <p class="benefits__item-title">It's Quality</p>
+                <p class="benefits__item-desc">
+                  Quality is what makes our customers come to us again and again. We not only guarantee that your furniture will serve you
+                  for many years, but we also provide a guarantee for some of our products.
+                </p>
+              </div>
               <img src="@/assets/about-benefits-3.png" class="benefits__item-logo" alt="" />
             </div>
           </div>
         </div>
         <div class="visit-us">
-          <h3 class="title">Better to see live than in the photo</h3>
+          <h3 class="title title--long-title title--left">Better to see live than in the photo</h3>
           <div class="visit-us__container">
             <div class="visit-us__description">
               <p class="visit-us__title">Visit our showrooms</p>
@@ -92,12 +98,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import 'src/media';
+
 .about {
   &__gallery {
     display: grid;
     grid-template-columns: [logo] 2fr [desc]1fr;
     gap: 10px;
     margin-top: 30px;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
 
     &-logo {
       grid-area: logo;
@@ -115,6 +127,10 @@ export default {
       background: #dde1d8;
       padding: 40px 40px 121px 40px;
       height: 439px;
+      @include desktop {
+        min-height: 439px !important;
+        height: auto;
+      }
     }
   }
 
@@ -140,10 +156,30 @@ export default {
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 30px;
+    @include tablet {
+      display: block;
+    }
+
+    @include desktop {
+      display: block;
+      //gap: 10px;
+    }
   }
 
   &__item {
     max-width: 30%;
+    @include tablet {
+      max-width: unset;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: unset;
+      align-items: flex-start;
+      justify-content: flex-end;
+      margin-top: 15px;
+    }
 
     &-title {
       color: rgba(10, 10, 10, 0.89);
@@ -160,10 +196,25 @@ export default {
       max-width: 322px;
       min-height: 138px;
       text-align: justify;
+      @include tablet {
+        max-width: unset;
+      }
+
+      @include desktop {
+        min-height: 161px;
+        max-width: unset;
+      }
 
       &--wide {
         max-width: unset;
         text-align: justify;
+        @include tablet {
+          max-width: unset;
+        }
+
+        @include desktop {
+          max-width: 100%;
+        }
       }
     }
 
@@ -171,9 +222,25 @@ export default {
       margin-top: 30px;
       border-radius: 10px;
       height: 306px;
+      @include tablet {
+        margin-top: 0;
+        width: 100%;
+      }
+
+      @include desktop {
+        margin-top: 0;
+        margin-right: 30px;
+      }
 
       &--wide {
         max-width: 396px;
+        @include tablet {
+          max-width: unset;
+        }
+
+        @include desktop {
+          max-width: 324px;
+        }
       }
     }
   }
@@ -188,6 +255,12 @@ export default {
     justify-content: flex-start;
     gap: 10px;
     margin-top: 30px;
+    @include tablet {
+      flex-direction: column;
+    }
+    @include desktop {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -212,6 +285,11 @@ export default {
     border-radius: 10px;
     background: #f2f0ea;
     padding: 37px;
+    max-height: 262px;
+    @include desktop {
+      width: 100%;
+      max-height: unset;
+    }
   }
 
   &__gallery {
@@ -219,6 +297,14 @@ export default {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
+
+    &-logo {
+      width: 49%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
   }
 }
 </style>

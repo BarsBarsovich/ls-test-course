@@ -1,41 +1,39 @@
 <template>
-  <div class="container">
-    <div class="layout">
-      <div class="layout__header">
-        <xHeader />
-      </div>
-      <div class="layout__content">
-        <div class="error">
-          <div class="error__title">
-            <h1 class="title">Page Not Found (Error 404)</h1>
-            <p class="error__text">
-              Unfortunately, the page you are looking for cannot be found. It may have been moved, deleted, or temporarily unavailable.
-            </p>
-          </div>
-          <div class="error__steps">
-            <p>What can you do next?</p>
-            <ul class="error__list">
-              <li class="error__list-item">
-                1. Check the correctness of the URL you entered. Make sure you haven't made any typos or errors.
-              </li>
-              <li class="error__list-item">
-                2. Return to the homepage of our online furniture store and use the navigation menu or search to find the furniture or
-                information you're looking for.
-              </li>
-              <li class="error__list-item">
-                3. Contact our customer support if you need additional assistance or if you believe this is an error.
-              </li>
-            </ul>
-            <p class="error__text">
-              We apologize for any inconvenience caused by this error. We are continuously working to improve our online furniture store to
-              provide you with the best shopping experience. Thank you for your understanding and interest in our furniture products!
-            </p>
-          </div>
+  <div class="layout">
+    <div class="layout__header">
+      <xHeader />
+    </div>
+    <div class="layout__content">
+      <div class="error">
+        <div class="error__title">
+          <h1 class="title">Page Not Found (Error 404)</h1>
+          <p class="error__text">
+            Unfortunately, the page you are looking for cannot be found. It may have been moved, deleted, or temporarily unavailable.
+          </p>
+        </div>
+        <div class="error__steps">
+          <p>What can you do next?</p>
+          <ul class="error__list">
+            <li class="error__list-item">
+              1. Check the correctness of the URL you entered. Make sure you haven't made any typos or errors.
+            </li>
+            <li class="error__list-item">
+              2. Return to the homepage of our online furniture store and use the navigation menu or search to find the furniture or
+              information you're looking for.
+            </li>
+            <li class="error__list-item">
+              3. Contact our customer support if you need additional assistance or if you believe this is an error.
+            </li>
+          </ul>
+          <p class="error__text">
+            We apologize for any inconvenience caused by this error. We are continuously working to improve our online furniture store to
+            provide you with the best shopping experience. Thank you for your understanding and interest in our furniture products!
+          </p>
         </div>
       </div>
-      <div class="layout__footer">
-        <Footer />
-      </div>
+    </div>
+    <div class="layout__footer">
+      <Footer />
     </div>
   </div>
 </template>
@@ -51,6 +49,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import 'src/media';
+
 .error {
   width: 100%;
   height: 100%;
@@ -61,6 +61,9 @@ export default {
     justify-content: center;
     flex-direction: column;
     height: 50%;
+    @include tablet {
+      height: 29%;
+    }
   }
 
   &__text {

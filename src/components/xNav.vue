@@ -77,6 +77,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import 'src/media';
+
 .nav {
   &__container {
     padding: 14px 0;
@@ -87,10 +89,21 @@ export default {
     align-items: center;
     justify-content: space-between;
 
+    @include tablet {
+      flex-direction: column;
+    }
+
     &-wrapper {
       gap: 48px;
+      @include tablet {
+        gap: 24px;
+      }
     }
   }
+
+  //&__item {
+  //  margin: 20px 0;
+  //}
 
   &__item-link {
     font-size: 16px;

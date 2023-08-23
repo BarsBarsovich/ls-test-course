@@ -123,6 +123,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import 'src/media';
+
 .footer {
   margin-top: 60px;
   min-height: 264px;
@@ -132,6 +134,12 @@ export default {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    @include tablet {
+      flex-direction: column;
+    }
+    @include desktop {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -140,6 +148,9 @@ export default {
     font-style: normal;
     font-weight: 300;
     max-width: 403px;
+    @include desktop {
+      max-width: unset;
+    }
   }
 
   &__form {
@@ -147,6 +158,12 @@ export default {
 
     &-wrapper {
       width: 30%;
+      @include tablet {
+        width: 100%;
+      }
+      @include desktop {
+        width: 100%;
+      }
     }
 
     &-row {
@@ -174,6 +191,17 @@ export default {
     margin-left: 154px;
 
     width: 70%;
+    @include tablet {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+    @include desktop {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 20px;
+    }
 
     &-item {
       margin-bottom: 20px;
@@ -199,6 +227,10 @@ export default {
     align-items: center;
     margin-top: 34px;
     justify-content: flex-end;
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__contacts {
@@ -243,6 +275,10 @@ export default {
   margin-right: 15px;
   width: 283px;
   max-width: 283px;
+  @include desktop {
+    max-width: unset;
+    width: 100%;
+  }
 }
 
 .checkbox {
