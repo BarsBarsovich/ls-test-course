@@ -42,9 +42,9 @@
               We create our furniture from all kinds of materials, including Eco materials, hypoallergenic, etc.
             </p>
           </div>
-          <a href="/about">
+          <router-link to="/about">
             <XButton text="Read more" :isGreen="true" />
-          </a>
+          </router-link>
         </div>
         <div class="store__slider-buttons">
           <SliderButton />

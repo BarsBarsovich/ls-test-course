@@ -122,6 +122,7 @@ export default {
   },
   mounted() {
     this.currentProduct = this.products.find(x => x.id === +this.$route.params.id);
+    window.scrollTo(0, 0);
   },
   methods: {
     getTitle() {

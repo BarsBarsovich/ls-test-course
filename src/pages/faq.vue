@@ -29,9 +29,9 @@
             </p>
             <p class="question">4. Can I return or exchange a product?</p>
             <p class="question">
-              Yes, we have a return and exchange policy in place. If you are not completely satisfied with your purchase, you can return the
-              product within a specified period or exchange it for another item. Detailed information about our return and exchange policy
-              can be found on website or by contacting our customer support.
+              Да, у нас действует политика возврата и обмена товаров. Если вы не полностью удовлетворены своей покупкой, вы можете вернуть
+              товар в течение указанного срока или обменять его на другой товар. Подробная информация о нашей политике возврата и обмена
+              можно найти на веб-сайте или обратившись в нашу службу поддержки клиентов.
             </p>
             <p class="question">5. How can I contact your customer support?</p>
             <p class="question">

@@ -67,7 +67,7 @@
                 We invite you to visit our showrooms to get to know our furniture better and test it, we will be glad to see you.
               </p>
               <div class="visit-us__btn-wrapper">
-                <router-link to="/page">
+                <router-link to="/about">
                   <xButton text="Our showrooms" />
                 </router-link>
               </div>
@@ -94,6 +94,9 @@ import XButton from '@/components/xButton/xButton.vue';
 export default {
   name: 'aboutPage',
   components: { XButton, XHeader, XFooter },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 
